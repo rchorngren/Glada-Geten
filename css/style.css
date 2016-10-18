@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfcfc;
+    font-family: 'Asap', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-header {
+    background-color: #ff9100;
+    overflow: hidden;
+}
+
+.site-header h1 {
+    font-size: 2.5em;
+    padding: 10px 10px 10px 30px;
+    float: left;
+}
+
+.site-wrapper {
+    background-color: #ffe0b2;
+    padding-left: 30px;
+    flex: 1;
+}
+
+/*******************************************
+MENU
+*******************************************/
+
+.site-nav {
+    background-color: #ff9100;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: none;
+}
+
+.nav-open .site-nav {
+    display: block;
+}
+
+.site-nav ul {
+    list-style-type: none;
+}
+
+.site-ul {
+    padding: 0;
+    margin: 0;
+}
+
+.site-nav a {
+    color: #f2f2f2;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+}
+
+.arrow-down::after {
+    content: "";
+    display: inline-block;
+    border: 10px solid transparent;
+    border-top-color: currentColor;
+    border-bottom-width: 0;
+    margin-left: 0.5em;
+}
+
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown {
+    background-color: #000;
+}
+
+.dropdown a {
+    display: block;
+    padding: 20px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/*  responsive menu  */
+
+.toggle-nav {
+    height: 19px;
+    width: 30px;
+    margin-right: 20px;
+    margin-top: 30px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    float: right;
+}
+
+.toggle-nav span {
+    background-color: #000;
+    height: 5px;
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+
+.toggle-nav span:nth-child(1) {
+    top: 0;
+}
+
+.toggle-nav span:nth-child(2) {
+    top: 7px;
+}
+.toggle-nav span:nth-child(3) {
+    top: 14px;
+}
+
+
+/*******************************************
+BOOKING
+*******************************************/
+
+.form-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.booking-btn,
+.form-btn {
+    font-weight: 400px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.booking-btn {
+    background-color: #f44336;
+    font-size: 14px;
+    width: 150px;
+    padding: 25px 40px;
+    margin: 40px 40px 40px 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+.form-btn {
+    background-color: #8e24aa;
+    font-size: 18px;
+    line-height: 70px;
+    width: 240px;
+    height: 70px;
+    margin-bottom: 20px;
+    margin-left: 205px;
+}
+
+/*  Styla alla input som inte har dessa typer  */
+.responsive-block input:not([type='radio']),
+.responsive-block input:not([type='checkbox']),
+.responsive-block input:not([type='submit']),
+textarea {
+    padding: 10px;
+    border: solid 5px #c9c9c9;
+    transition: border 0.3s;
+}
+
+.responsive-block input:not([type='radio']):focus,
+.responsive-block input:not([type='checkbox']):focus,
+.responsive-block input:not([type='submit']):focus,
+textarea:focus {
+    border: solid 5px #969696;
+}
+
+label {
+    font-weight: 900;
+    font-size: 20px;
+    width: 200px;
+    display: inline-block;
+}
+
+input, textarea, select {
+    font-size: 15px;
+}
+
+input {
+    width: 250px;
+    height: 65px;
+}
+
+.other {
+    vertical-align: top;
+}
+
+
+/*******************************************
+GALLERY
+*******************************************/
+
+.gallery-img {
+    width: 20%;
+    height: auto;
+}
+
+
+/*******************************************
+FOOTER
+*******************************************/
+
+.site-footer {
+    background-color: #ff9100;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/*******************************************
+RESPONSIVE DESIGN
+*******************************************/
+
+@media screen and (max-width: 500px) {
+    label, input, textarea {
+        display: block;
+    }
+
+    .form-btn {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    .site-nav {
+        display: block;
+    }
+
+    .site-ul > li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .site-ul > li:first-child {
+        margin-left: 0;
+    }
+
+    .toggle-nav {
+        display: none;
+    }
+
+    .dropdown {
+        width: 160px;
+        margin-left: -80px;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        z-index: 10;
+    }
+
+}

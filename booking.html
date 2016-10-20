@@ -25,9 +25,11 @@
 <nav id="nav" class="site-nav">
     <ul class="site-ul">
         <li><a href="index.html">Hem</a></li>
-        <li class="has-dropdown"><a class="arrow-down" href="#about">Om oss</a>
+        <li class="has-dropdown"><a class="arrow-down" href="#about">Om DGG</a>
             <ul id="about" class="dropdown hidden">
+                <li><a href="about.html">Om oss</a></li>
                 <li><a href="gallery.html">Galleri</a></li>
+                <li><a href="price.html">Priser</a></li>
             </ul>
         </li>
         <li><a href="booking.html">Boka rum</a></li>
@@ -78,13 +80,16 @@
             <label for="departs">Lämnar</label>
             <input id="departs" name="departs" type="date" required>
         </p>
-        <p class="responsive-block">
+
+        <p class="responsive-block select">
             <label for="rooms">Rum</label>
             <select name="select">
+                <option value="value0" selected>Välj typ av rum</option>
                 <option value="value1">Enkelrum</option>
-                <option value="value2" selected>Dubbelrum</option>
+                <option value="value2">Dubbelrum</option>
             </select>
         </p>
+
         <p class="responsive-block">
             <label class="other" for="other">Övrig information</label>
             <textarea id="other" name="other" rows="8" cols="30"></textarea>

@@ -1,0 +1,47 @@
+#content{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow:hidden;
+}
+
+.gallery{
+    width: 800px;
+    margin: auto;
+}
+
+.gallery ul{
+    list-style: none;
+}
+
+.gallery li{
+    float: left;
+    margin: 10px;
+}
+
+.gallery img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    border: 2px solid #000;
+}
+
+.gallery img:hover {
+    border: 1px solid #fff;
+}
+
+
+@media screen and (max-width: 530px) {
+    #content {
+        margin-left: -30px;
+    }
+
+    .gallery {
+        display: initial;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .gallery img {
+        height: 10%;
+    }
+}

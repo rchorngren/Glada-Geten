@@ -3,47 +3,103 @@
 }
 
 body {
-    background-color: #fcfcfc;
-    font-family: 'Asap', sans-serif;
-    margin: 0;
+    background-color: #e7e5e5;
+    font-family: 'Open Sans', sans-serif;
     min-height: 100vh;
     max-width: 1080px;
     display: flex;
     flex-direction: column;
+    margin: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
 .site-header {
-    background-color: #ff9100;
+    background-image: url("../img/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 1080px;
+    height: 400px;
     overflow: hidden;
 }
 
 .site-header h1 {
-    font-size: 2.5em;
-    padding: 10px 10px 10px 30px;
+    color: #fff;
+    font-family: 'IM Fell Great Primer', serif;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    padding: 8px 20px;
     float: left;
 }
 
 .site-wrapper {
-    background-color: #ffe0b2;
-    padding-left: 30px;
+    background-color: #fff;
     flex: 1;
 }
 
+
 /*******************************************
-MENU
+            CONTACT
+*******************************************/
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-info-section {
+    margin-bottom: 30px;
+}
+
+.contact-info span {
+    display: block;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-info a:hover {
+    color: #3ca459;
+}
+
+.location,
+.mail,
+.phone {
+    height: 52px;
+}
+
+.compatible {
+    margin: 30px;
+}
+
+.compatible img {
+    margin: 5px;
+}
+
+.dektop {
+    height: 65px;
+}
+
+.tablet {
+    height: 55px;
+}
+
+.mobile {
+    height: 45px;
+}
+
+/*******************************************
+            MENU
 *******************************************/
 
 .site-nav {
-    background-color: #ff9100;
-    padding-left: 30px;
-    padding-right: 30px;
-    display: none;
-}
-
-.nav-open .site-nav {
-    display: block;
+    background-color: #1c1c1c;
+    height: 51px;
+    margin: 0;
+    padding: 0;
 }
 
 .site-nav ul {
@@ -53,6 +109,16 @@ MENU
 .site-ul {
     padding: 0;
     margin: 0;
+    float: right;
+    display: none;
+}
+
+.nav-open .site-ul {
+    display: block;
+}
+
+.site-ul li {
+    margin: 0;
 }
 
 .site-nav a {
@@ -61,14 +127,20 @@ MENU
     text-decoration: none;
     text-transform: uppercase;
     display: block;
+    padding: 14px;
+}
+
+.site-nav a:hover {
+    background-color: #3ca459;
 }
 
 .arrow-down::after {
     content: "";
     display: inline-block;
-    border: 10px solid transparent;
+    border: 4px solid transparent;
     border-top-color: currentColor;
     border-bottom-width: 0;
+    margin-bottom: 0.1em;
     margin-left: 0.5em;
 }
 
@@ -77,12 +149,13 @@ MENU
 }
 
 .dropdown {
-    background-color: #000;
+    background-color: #1c1c1c;
+    padding: 0;
+    top: 100%;
 }
 
-.dropdown a {
-    display: block;
-    padding: 20px 0;
+.dropdown a:hover {
+    background-color: #3ca459;
 }
 
 .hidden {
@@ -94,16 +167,15 @@ MENU
 .toggle-nav {
     height: 19px;
     width: 30px;
-    margin-right: 20px;
-    margin-top: 30px;
+    top: 15px;
+    left: 20px;
     display: block;
-    position: relative;
+    position: absolute;
     z-index: 1;
-    float: right;
 }
 
 .toggle-nav span {
-    background-color: #000;
+    background-color: #fff;
     height: 5px;
     width: 100%;
     display: block;
@@ -123,12 +195,107 @@ MENU
 
 
 /*******************************************
-BOOKING
+    SHAPES, HOME PAGE - ABOUT PAGE
+*******************************************/
+
+.img-bubble-left,
+.img-bubble-right {
+    border-radius: 50%;
+    width: 25%;
+    margin: 20px 40px 20px 30px;
+    shape-outside: circle();
+}
+
+.img-bubble-left {
+    float: left;
+}
+
+.img-bubble-right {
+    float: right;
+}
+
+
+/*******************************************
+            HOME PAGE - ABOUT PAGE
+*******************************************/
+
+.index-section,
+.section-about {
+    max-width: 875px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.index-wrapper,
+.about-wrapper {
+    margin-bottom: 90px;
+}
+
+.index-section h1,
+.about-h1 {
+    font-family: 'IM Fell Great Primer', serif;
+    font-size: 2.5em;
+    margin-left: 30px;
+    margin-bottom: 45px;
+}
+
+.index-section p,
+.about-section {
+    margin: 20px;
+}
+
+.bubble-title {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+/*******************************************
+            PRICE
+*******************************************/
+
+thead {
+    display: none;
+}
+
+.price-h1 {
+    font-family: 'IM Fell Great Primer', serif;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 25px;
+}
+
+.price-table {
+    margin-top: 35px;
+}
+
+.price-table,
+.table-info {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.table-info {
+    margin-bottom: 60px;
+}
+
+th {
+    font-weight: 900;
+}
+
+
+/*******************************************
+            BOOKING
 *******************************************/
 
 .form-container {
     margin-left: auto;
     margin-right: auto;
+    margin: 20px;
 }
 
 .booking-btn,
@@ -141,18 +308,8 @@ BOOKING
     cursor: pointer;
 }
 
-.booking-btn {
-    background-color: #f44336;
-    font-size: 14px;
-    width: 150px;
-    padding: 25px 40px;
-    margin: 40px 40px 40px 40px;
-    display: inline-block;
-    text-align: center;
-}
-
 .form-btn {
-    background-color: #8e24aa;
+    background-color: #3ca459;
     font-size: 18px;
     line-height: 70px;
     width: 240px;
@@ -161,7 +318,7 @@ BOOKING
     margin-left: 205px;
 }
 
-/*  Styla alla input som inte har dessa typer  */
+/*  SStyle all inputs that dosen't have these types  */
 .responsive-block input:not([type='radio']),
 .responsive-block input:not([type='checkbox']),
 .responsive-block input:not([type='submit']),
@@ -247,7 +404,7 @@ input {
 }
 
 /*******************************************
-CONFIRMED THANK
+            CONFIRMED THANK
 *******************************************/
 
 .confirmed-form {
@@ -263,28 +420,96 @@ CONFIRMED THANK
 
 
 /*******************************************
-GALLERY
+ROOMS
 *******************************************/
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 40px 20px 40px;
+}
 
+.col {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
 
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    border-radius: 2px;
+}
 
-/*******************************************
-FOOTER
-*******************************************/
+.card-small {
+    position: relative;
+}
 
-.site-footer {
-    background-color: #ff9100;
-    color: #fff;
-    overflow: hidden;
+.card-small .card-title {
+    font-size: 2.7rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.img-room {
+    max-width: 100%;
+}
+
+.booking-btn {
+    background-color: #3ca459;
+    font-size: 14px;
+    width: 160px;
+    display: inline-block;
+    padding: 25px 40px;
+    margin: 40px;
     text-align: center;
 }
 
 
 /*******************************************
-RESPONSIVE DESIGN
+            GOOGLE MAPS
 *******************************************/
 
+#map {
+    height: 360px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/*******************************************
+            FOOTER
+*******************************************/
+
+.site-footer {
+    font-size: 14px;
+    background-color: #1c1c1c;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+/*******************************************
+            RESPONSIVE DESIGN
+*******************************************/
+
+/*  When document size is smallen than  */
 @media screen and (max-width: 500px) {
     label, input, textarea {
         display: block;
@@ -295,18 +520,44 @@ RESPONSIVE DESIGN
     }
 }
 
-@media screen and (min-width: 530px) {
-    .site-nav {
+@media screen and (max-width: 679px) {
+    .nav-open {
+        cursor: pointer;
+    }
+
+    .site-header h1 {
+        display: none;
+    }
+
+    .site-ul {
+        background-color: #1c1c1c;
+        width: 165px;
+        padding: 20px;
+        top: 50px;
+        z-index: 1;
+        position: absolute;
+    }
+
+    .site-ul >li + li {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 753px) {
+    .col {
+        width: 100%;
+    }
+}
+
+/*  When document size is bigger than  */
+@media screen and (min-width: 680px) {
+    .site-ul {
+        margin-right: 45px;
         display: block;
     }
 
     .site-ul > li {
         display: inline-block;
-        margin-left: 20px;
-    }
-
-    .site-ul > li:first-child {
-        margin-left: 0;
     }
 
     .toggle-nav {
@@ -314,12 +565,11 @@ RESPONSIVE DESIGN
     }
 
     .dropdown {
-        width: 160px;
+        width: 155px;
         margin-left: -80px;
         position: absolute;
         left: 50%;
         top: 100%;
         z-index: 10;
     }
-
 }

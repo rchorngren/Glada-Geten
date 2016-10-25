@@ -3,13 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Den glada geten - Bed &amp; Breakfast</title>
-    <meta name="copyright" content="http://www.">
+    <meta name="copyright" content="http://www.dengladageten.com">
     <meta name="author" content="Grupp 8 - Octagon">
     <meta name="description" content="Välkommen till Den glada geten, en Bed and Breakfast ute på landsbygden för alla som vill samla sina krafter.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400i|Open+Sans:400,700" rel="stylesheet">
 </head>
 <body>
 
@@ -44,61 +43,66 @@
 <div class="site-wrapper">
 <div class="form-container">
     <form class="booking" action="confirmed-thank.html" method="get">
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="first-name">Förnamn</label>
             <input id="first-name" name="firts-name" placeholder="Förnamn" type="text" required>
         </p>
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="last-name">Efternamn</label>
             <input id="last-name" name="last-name" placeholder="Efternamn" type="text" required>
         </p>
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="email">E-mail</label>
             <input id="email" name="email" placeholder="E-mail" type="text" required>
         </p>
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="phone">Telefon</label>
             <input id="phone" name="phone" placeholder="Telefonnummer" type="number" required>
         </p>
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="address">Adress</label>
             <input id="address" name="address" placeholder="Adress" type="text" required>
         </p>
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="zip-code">Postnummer</label>
             <input id="zip-code" name="zip-code" placeholder="Postnummer" type="number" required>
         </p>
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="city">Stad</label>
             <input id="city" name="city" placeholder="Stad" type="text" required>
         </p>
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="country">Land</label>
             <input id="country" name="country" placeholder="Land" type="text" required>
         </p>
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="arrives">Anländer</label>
             <input id="arrives" name="arrives" type="date" required>
         </p>
-        <p class="responsive-block">
+        <p class="field-block">
             <label for="departs">Lämnar</label>
             <input id="departs" name="departs" type="date" required>
         </p>
 
-        <p class="responsive-block select">
+        <p class="field-block">
             <label for="rooms">Rum</label>
+            <span class="select">
             <select name="select">
                 <option value="value0" selected>Välj typ av rum</option>
                 <option value="value1">Enkelrum</option>
                 <option value="value2">Dubbelrum</option>
             </select>
+        </span>
         </p>
 
-        <p class="responsive-block">
+        <p class="field-block field-block-full">
             <label class="other" for="other">Övrig information</label>
-            <textarea id="other" name="other" rows="8" cols="30"></textarea>
+            <textarea id="other" name="other" rows="8"></textarea>
         </p>
-        <button class="form-btn">Submit</button>
+
+        <p class="field-block-btn field-block-full">
+            <button class="form-btn">Submit</button>
+        </p>
     </form>
 </div>
 </div>

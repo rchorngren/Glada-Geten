@@ -39,57 +39,6 @@ body {
 }
 
 
-/*******************************************
-            CONTACT
-*******************************************/
-
-.contact-info {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.contact-info-section {
-    margin-bottom: 30px;
-}
-
-.contact-info span {
-    display: block;
-}
-
-.contact-info a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.contact-info a:hover {
-    color: #3ca459;
-}
-
-.location,
-.mail,
-.phone {
-    height: 52px;
-}
-
-.compatible {
-    margin: 30px;
-}
-
-.compatible img {
-    margin: 5px;
-}
-
-.dektop {
-    height: 65px;
-}
-
-.tablet {
-    height: 55px;
-}
-
-.mobile {
-    height: 45px;
-}
 
 /*******************************************
             MENU
@@ -227,7 +176,7 @@ body {
 
 .index-section,
 .section-about {
-    max-width: 875px;
+    max-width: 840px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -258,6 +207,18 @@ body {
     font-weight: 700;
 }
 
+.aktiviteter {
+    margin-top: 80px;
+}
+
+.price-reference {
+    text-decoration: none;
+    color: #3ca459;
+}
+
+.price-reference:hover {
+    color: #1c1c1c;
+}
 
 /*******************************************
             PRICE
@@ -484,12 +445,17 @@ ROOMS
     position: relative;
 }
 
+.room-title {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
 .card-small .card-title {
-    font-size: 2.7rem;
+    /*font-size: 2.7rem;
     font-family: Helvetica, sans-serif;
     font-weight: 700;
     color: #000;
-    text-transform: uppercase;
+    text-transform: uppercase;*/
     margin: 0;
     position: absolute;
     top: 50%;
@@ -503,6 +469,59 @@ ROOMS
 
 .img-room {
     max-width: 100%;
+}
+
+
+/*******************************************
+            CONTACT
+*******************************************/
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-info-section {
+    margin-bottom: 30px;
+}
+
+.contact-info span {
+    display: block;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-info a:hover {
+    color: #3ca459;
+}
+
+.location,
+.mail,
+.phone {
+    height: 52px;
+}
+
+.compatible {
+    margin: 30px;
+}
+
+.compatible img {
+    margin: 5px;
+}
+
+.dektop {
+    height: 65px;
+}
+
+.tablet {
+    height: 55px;
+}
+
+.mobile {
+    height: 45px;
 }
 
 

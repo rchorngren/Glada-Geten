@@ -33,6 +33,7 @@
                     <li><a href="room.html">Våra rum</a></li>
                     <li><a href="gallery.html">Galleri</a></li>
                     <li><a href="price.html">Priser</a></li>
+                    <li><a href="activity.html">Aktiviteter</a></li>
                 </ul>
             </li>
             <li><a href="contact.html">Kontakt</a></li>
@@ -45,63 +46,87 @@
     <form class="booking" action="confirmed-thank.html" method="get">
         <p class="field-block">
             <label for="first-name">Förnamn</label>
-            <input id="first-name" name="firts-name" placeholder="Förnamn" type="text" required>
+            <input class="text-field" id="first-name" name="firts-name" placeholder="Förnamn" type="text" required>
         </p>
         <p class="field-block">
             <label for="last-name">Efternamn</label>
-            <input id="last-name" name="last-name" placeholder="Efternamn" type="text" required>
+            <input class="text-field" id="last-name" name="last-name" placeholder="Efternamn" type="text" required>
         </p>
         <p class="field-block">
             <label for="email">E-mail</label>
-            <input id="email" name="email" placeholder="E-mail" type="text" required>
+            <input class="text-field" id="email" name="email" placeholder="E-mail" type="text" required>
         </p>
         <p class="field-block">
             <label for="phone">Telefon</label>
-            <input id="phone" name="phone" placeholder="Telefonnummer" type="number" required>
+            <input class="text-field" id="phone" name="phone" placeholder="Telefonnummer" type="number" required>
         </p>
         <p class="field-block">
             <label for="address">Adress</label>
-            <input id="address" name="address" placeholder="Adress" type="text" required>
+            <input class="text-field" id="address" name="address" placeholder="Adress" type="text" required>
         </p>
         <p class="field-block">
             <label for="zip-code">Postnummer</label>
-            <input id="zip-code" name="zip-code" placeholder="Postnummer" type="number" required>
+            <input class="text-field" id="zip-code" name="zip-code" placeholder="Postnummer" type="number" required>
         </p>
         <p class="field-block">
             <label for="city">Stad</label>
-            <input id="city" name="city" placeholder="Stad" type="text" required>
+            <input class="text-field" id="city" name="city" placeholder="Stad" type="text" required>
         </p>
         <p class="field-block">
             <label for="country">Land</label>
-            <input id="country" name="country" placeholder="Land" type="text" required>
+            <input class="text-field" id="country" name="country" placeholder="Land" type="text" required>
+        </p>
+
+        <!-- Sätt min-attribute för check-in med hjälp av php.
+        (date("Y-m-d", time();) -->
+        <p class="field-block">
+            <label for="arrives">Check-in</label>
+            <input class="text-field" id="arrives" name="arrives" type="date" min="2016-11-03" required>
         </p>
         <p class="field-block">
-            <label for="arrives">Anländer</label>
-            <input id="arrives" name="arrives" type="date" required>
-        </p>
-        <p class="field-block">
-            <label for="departs">Lämnar</label>
-            <input id="departs" name="departs" type="date" required>
+            <label for="departs">Check-out</label>
+            <input class="text-field" id="departs" name="departs" type="date" min="2016-11-04" required>
         </p>
 
         <p class="field-block">
             <label for="rooms">Rum</label>
             <span class="select">
-            <select name="select">
-                <option value="value0" selected>Välj typ av rum</option>
-                <option value="value1">Enkelrum</option>
-                <option value="value2">Dubbelrum</option>
-            </select>
-        </span>
+                <select name="select">
+                    <option value="value0" selected>Välj typ av rum</option>
+                    <option value="value1">Enkelrum</option>
+                    <option value="value2">Dubbelrum</option>
+                    <option value="value2">Familjerum</option>
+                </select>
+            </span>
         </p>
+
+    <div class="field-block field-block-full">
+        <fieldset>
+            <legend>Välj aktiviteter att boka</legend>
+            <ul>
+                <li>
+                    <label><input type="checkbox" name="activity" id="activity1" value="activity1">Getmatning</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="activity" id="activity2" value="activity2">Getklappning</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="activity" id="activity3" value="activity3">Skogspromenad</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="activity" id="activity4" value="activity4">Spa</label>
+                </li>
+            </ul>
+        </fieldset>
+    </div>
 
         <p class="field-block field-block-full">
             <label class="other" for="other">Övrig information</label>
-            <textarea id="other" name="other" rows="8"></textarea>
+            <textarea class="text-field" id="other" name="other" rows="8"></textarea>
         </p>
 
         <p class="field-block-btn field-block-full">
-            <button class="form-btn">Submit</button>
+            <button class="form-btn">Boka</button>
         </p>
     </form>
 </div>

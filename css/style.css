@@ -118,7 +118,6 @@ body {
 }
 
 /*  responsive menu  */
-
 .toggle-nav {
     height: 19px;
     width: 30px;
@@ -175,12 +174,35 @@ body {
 *******************************************/
 
 .index-section,
-.section-about {
+.section-about,
+.btn-section {
     max-width: 840px;
     margin-left: auto;
     margin-right: auto;
 }
 
+.btn-section {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.btn-section-booking,
+.btn-section-activity {
+    background-color: #3ca459;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #fff;
+    padding: 30px;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-section-booking:hover,
+.btn-section-activity:hover {
+    background-color: #276a3a;
+}
 
 .index-wrapper,
 .about-wrapper {
@@ -202,23 +224,6 @@ body {
     margin: 20px;
 }
 
-.bubble-title {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.aktiviteter {
-    margin-top: 80px;
-}
-
-.price-reference {
-    text-decoration: none;
-    color: #3ca459;
-}
-
-.price-reference:hover {
-    color: #1c1c1c;
-}
 
 /*******************************************
             PRICE
@@ -260,6 +265,56 @@ th {
 
 
 /*******************************************
+            ACTIVITY
+*******************************************/
+
+.activities {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 65px;
+}
+
+.activity-h1 {
+    font-family: 'IM Fell Great Primer', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.5em;
+    margin-left: 70px;
+}
+
+.activities p {
+    margin: 0;
+}
+
+.activity-section {
+    margin-bottom: 25px;
+}
+
+.activity-title {
+    font-weight: 700;
+}
+
+.activity-reference,
+.price-reference {
+    text-decoration: none;
+    color: #3ca459;
+    font-weight: 700;
+}
+
+.activity-reference:hover,
+.price-reference:hover {
+    color: #1c1c1c;
+    font-weight: 700;
+}
+
+.spa {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*******************************************
             BOOKING
 *******************************************/
 
@@ -276,6 +331,7 @@ th {
 
 .form-container .field-block {
     flex: 1 0 50%;
+    margin: 1em 0;
 }
 
 .form-container .field-block-full {
@@ -310,24 +366,24 @@ th {
     text-align: center;
 }
 
-/*  SStyle all inputs that dosen't have these types  */
-input:not([type='radio']),
-input:not([type='checkbox']),
-input:not([type='submit']),
-textarea {
+.text-field {
     padding: 10px;
     border: solid 5px #c9c9c9;
     transition: border 0.3s;
+    width: 250px;
+    height: 65px;
 }
 
-input:not([type='radio']):focus,
-input:not([type='checkbox']):focus,
-input:not([type='submit']):focus,
-textarea:focus {
+.text-field:focus {
     border: solid 5px #969696;
 }
 
-label {
+textarea.text-field {
+    height: auto;
+    width: 100%;
+}
+
+label, legend {
     color: #000;
     font-weight: 400;
     font-size: 18px;
@@ -338,14 +394,22 @@ input, textarea, select {
     font-size: 15px;
 }
 
-input {
-    width: 250px;
-    height: 65px;
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
-.field-block textarea {
-    width: 100%;
+fieldset ul {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
 }
+
+fieldset li {
+    margin-top: 5px;
+}
+
 
 .arrow-down::after {
     content: "";
@@ -377,9 +441,7 @@ input {
           appearance: none;
 }
 
-
 /*  Dropdown arrow  */
-
 .select:after {
     position: absolute;
     top: 50%;
@@ -427,7 +489,7 @@ ROOMS
 }
 
 .col {
-    width: 45%;
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -445,11 +507,6 @@ ROOMS
     position: relative;
 }
 
-.room-title {
-    font-size: 1.2em;
-    font-weight: 700;
-}
-
 .card-small .card-title {
     /*font-size: 2.7rem;
     font-family: Helvetica, sans-serif;
@@ -461,6 +518,11 @@ ROOMS
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.room-title {
+    font-weight: 700;
+    font-size: 1.1em;
 }
 
 .card-content {
@@ -586,6 +648,10 @@ ROOMS
 
     .site-ul >li + li {
         margin-top: 10px;
+    }
+
+    .activities {
+        margin: 20px;
     }
 }
 

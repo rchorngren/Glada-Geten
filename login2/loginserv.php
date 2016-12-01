@@ -2,7 +2,7 @@
 $error=''; //Variable to Store error message;
 if(isset($_POST['submit'])){
  if(empty($_POST['user']) || empty($_POST['pass'])){
- $error = "Username or Password is Invalid";
+ $error = "Användarnamn eller lösenord är felaktigt";
  }
  else
  {
@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
  }
  else
  {
- $error = "Username of Password is Invalid";
+ $error = "Användarnamn eller lösenord är felaktigt";
  }
  mysqli_close($conn); // Closing connection
  }

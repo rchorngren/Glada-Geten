@@ -23,16 +23,16 @@ input[type=text], input[type=password] {
 }
 
 input[type=submit] {
-	width:100%;
-	background-color:#009;
+	width: 100%;
+	background-color:#3ca459;
 	color:#fff;
-	border:2px solid #06F;
 	padding:10px;
 	font-size:20px;
 	cursor:pointer;
-	border-radius:5px;
-	margin-bottom:15px; 
+	margin-bottom: 15px;
+	border-style: none;
 }
+
 
 /************************************************
 Profile-page
@@ -40,22 +40,59 @@ Profile-page
 
 #profile {
 	padding:50px;
-	border:1px solid grey;
+	border:1px solid #000;
 	font-size:20px;
-	background-color:#DCE6F7
 }
 
 #logout {
 	float:right;
-	padding:5px;
-	border:1px solid gray
+	padding:10px;
+	border:1px solid #000;
 }
 
 a {
 	text-decoration:none;
-	color:#6495ed
+	color: #000;
 }
 
 i {
-	color:#6495ed
+	color: #000;
 }
+
+/************************************************
+NAV
+************************************************/
+nav {
+	text-align: center;
+	padding: 20px 0;
+	width: 100%;
+	background-color: #000;
+
+}
+
+ul {	
+	list-style: none;
+	padding: 0;	
+	font-size: 2em;
+	margin: 0;
+}
+
+
+li {
+	display: inline-block;
+	margin-left: 40px;
+
+}
+
+li>a {
+	color: #fff;
+}
+
+li>a:hover {
+	color: #3ca459;
+}
+
+.current {
+	color: #3ca459;
+}
+

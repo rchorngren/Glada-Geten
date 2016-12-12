@@ -54,12 +54,12 @@
 
 		<?php
 
-		$handle = opendir(dirname(realpath(__FILE__)).'/picgallery/');
+		$handle = opendir(dirname(realpath(__FILE__)).'/login/user_images/');
         while($file = readdir($handle)){
             if($file !== '.' && $file !== '..'){
 
 
-                echo '<li><a class="fancybox" rel="group" href="picgallery/'.$file.'"><img src="picgallery/'.$file.'" border="0" /></a></li>';
+                echo '<li><a class="fancybox" rel="group" href="login/user_images/'.$file.'"><img src="login/user_images/'.$file.'" border="0" /></a></li>';
 
 
             }

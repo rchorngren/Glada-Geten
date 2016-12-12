@@ -1,7 +1,4 @@
 <?php
-include('session.php');
-?>
-<?php
 
 	require_once 'dbconfig.php';
 	
@@ -18,31 +15,24 @@ include('session.php');
 		$stmt_delete->bindParam(':uid',$_GET['delete_id']);
 		$stmt_delete->execute();
 		
-		header("Location: image.php");
+		header("Location: picadmin.php");
 	}
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC>
 <html>
 <head>
-<title>Your Home Page</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 </head>
+
 <body>
-<div id="profile">
-<b id="welcome">Välkommen : <i><?php echo $login_session; ?></i></b>
-<b id="logout"><a href="logout.php">Logga ut</a></b>
-</div>
-<nav>
-	<ul>
-		<li><a href="profile.php">Text admin</a></li>
-		<li><a href="image.php" class="current">Bild admin</a></li>
-		<li><a href="booking.php">Bokningar</a></li>			
-	</ul>
-</nav>
+
+
 <div class="container">
 
 	<div class="page-header">
@@ -95,6 +85,7 @@ include('session.php');
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

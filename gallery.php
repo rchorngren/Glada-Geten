@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="utf-8">
@@ -9,9 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400i|Open+Sans:400,700" rel="stylesheet">
+
+    <!-- Fancybox gallery -->
+    <link rel="stylesheet" type="text/css" href="gallery/css-plugin/slide.css">
+    <link rel="stylesheet" href="gallery/source/jquery.fancybox.css" type="text/css" media="screen" />
 </head>
 <body>
-
 
 <header class="site-header">
     <a href="index.html">
@@ -34,6 +37,7 @@
                     <li><a href="room.html">Våra rum</a></li>
                     <li><a href="gallery.php">Galleri</a></li>
                     <li><a href="price.html">Priser</a></li>
+                    <li><a href="activity.html">Aktiviteter</a></li>
                 </ul>
             </li>
             <li><a href="contact.html">Kontakt</a></li>
@@ -43,42 +47,29 @@
 
 
 <div class="site-wrapper">
-    <h1 class="activity-h1">Aktiviteter</h1>
-    <div class="activities">
-        <div class="activity-section">
-            <p class="activity-title">Getmatning</p>
-            <p>Bokningsbar aktivitet som innefattar mat till Gösta och Selma och kort
-            information om getskötsel.</p>
-            <p>Tidsåtgång: ca 30 min</p>
-        </div>
+    <section id="content">
+		<div class="gallery">
+		<ul>
 
-        <div class="activity-section">
-            <p class="activity-title">Getklappning</p>
-            <p>Gå in i hagen och klappa getterna! Personal från glada geten följer med och ser till
-            att du kommer nära både Gösta och Selma, och vid rätt tid på året även lammen.</p>
-            <p>Tidsåtgång: ca 30 min</p>
-        </div>
 
-        <div class="activity-section">
-            <p class="activity-title">Skogspromenad</p>
-            <p>Guidad vandring runt området för den som är nyfiken på lite mer lokalkännedom.
-            Finns även kartor för kostnadsfria vandringar utan guide.</p>
-            <p>Tidsåtgång: ca 2 timmar</p>
-        </div>
+		<?php
 
-        <div class="activity-section">
-            <p class="activity-title">Skotersafari</p>
-                Du tillsammans med en ledare kan känna att du kör tryggt och
-                säkert på en lagom lång tur i den underbara naturen i tjärnholmens
-                omnejd. Under turerna stannar vi för korvgrillning! Någon form av
-                körkort krävs, svenskt eller utländskt.
-            </p>
-            <p>Tidsåtgång: 4 timmar</p>
-        </div>
+		$handle = opendir(dirname(realpath(__FILE__)).'/picgallery/');
+        while($file = readdir($handle)){
+            if($file !== '.' && $file !== '..'){
 
-        <p class="spa">Du kan också boka en spaupplevelse på den glada getens egna SPA.
-        Se <a class="price-reference" href="price.html">priser</a> för mer information.</p>
-    </div>
+
+                echo '<li><a class="fancybox" rel="group" href="picgallery/'.$file.'"><img src="picgallery/'.$file.'" border="0" /></a></li>';
+
+
+            }
+        }
+
+		?>
+		</ul>
+
+		</div>
+	</section>
 </div>
 
 <footer class="site-footer">
@@ -95,6 +86,13 @@
 
 <script src="script/jquery-3.1.0.min.js"></script>
 <script src="script/main.js"></script>
+
+
+<!-- Add fancyBox -->
+<script type="text/javascript" src="gallery/source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+	$(".fancybox").fancybox();
+</script>
 
 </body>
 </html>

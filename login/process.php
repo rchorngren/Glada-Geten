@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 	// Get values passes from form in login.php file
 	$username = $_POST['user'];
 	$password = $_POST['pass'];
@@ -18,9 +18,15 @@
 		or die("Failed to query database ".mysql_error());
 	$row = mysql_fetch_array($result);
      if ($row['username'] == $username && $row['password'] == $password ){
-		echo "Login lyckades! Välkommen ".$row['username'];
+		echo "Login lyckades...typ! Välkommen ".$row['username'];
+
+		echo "Följande finns listade i databasen school;";
+		$db = mysql_connect("localhost", "root", "");
+		mysql_select_db("school");
+		echo [courses], [kids];
+
 	} else{
-		echo "Misslyckades att logga in";
+		echo "STFU!";
 	}
 ?>
 

@@ -223,11 +223,11 @@
 			<div class='field-block field-block-full'>
 				<fieldset>
 					<legend>Välj aktiviteter att boka</legend>
-					<input type='checkbox', name='activity[]', value='Getmatning' ><label>Getmatning  (100 kr/person)</label><br>
-					<input type='checkbox', name='activity[]', value='Getklappning' ><label>Getklappning (50 kr/person)</label><br>
-					<input type='checkbox', name='activity[]', value='Skogspromenad' ><label>Skogspromenad (250 kr/person)</label><br>
-					<input type='checkbox', name='activity[]', value='Skotersafari' ><label>Getklappning (50 kr/person)</label><br>
-					<input type='checkbox', name='activity[]', value='Spa' ><label>Spa (se <a class='price-reference' href='price.html'>prislista</a>)</label>
+					<input type='checkbox', name='activity[]', value='  Getmatning' ><label>Getmatning  (100 kr/person)</label><br>
+					<input type='checkbox', name='activity[]', value='  Getklappning' ><label>Getklappning (50 kr/person)</label><br>
+					<input type='checkbox', name='activity[]', value='  Skogspromenad' ><label>Skogspromenad (250 kr/person)</label><br>
+					<input type='checkbox', name='activity[]', value='  Skotersafari' ><label>Getklappning (50 kr/person)</label><br>
+					<input type='checkbox', name='activity[]', value='  Spa' ><label>Spa (se <a class='price-reference' href='price.html'>prislista</a>)</label>
 				</fieldset>
 	   
 				<p class='field-block field-block-full'>

@@ -1,9 +1,4 @@
-﻿<?php 
-    $db = mysqli_connect("localhost", "root", "", "company");
-
-?>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="utf-8">
@@ -19,7 +14,7 @@
 
 
 <header class="site-header">
-    <a href="index.php">
+    <a href="index.html">
         <h1>Den glada geten</h1>
     </a>
 
@@ -31,18 +26,18 @@
 
     <nav id="nav" class="site-nav">
         <ul class="site-ul">
-            <li><a href="index.php">Hem</a></li>
-            <li><a href="booking.php">Boka rum</a></li>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="booking.html">Boka rum</a></li>
             <li class="has-dropdown"><a class="arrow-down" href="#about">Om oss</a>
                 <ul id="about" class="dropdown hidden">
-                    <li><a href="about.php">Om oss</a></li>
-                    <li><a href="room.php">Våra rum</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                    <li><a href="room.html">Våra rum</a></li>
                     <li><a href="gallery.php">Galleri</a></li>
-                    <li><a href="price.php">Priser</a></li>
-                    <li><a href="activity.php">Aktiviteter</a></li>
+                    <li><a href="price.html">Priser</a></li>
+                    <li><a href="activity.html">Aktiviteter</a></li>
                 </ul>
             </li>
-            <li><a href="contact.php">Kontakt</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
         </ul>
     </nav>
 </header>
@@ -51,26 +46,26 @@
 <div class="site-wrapper">
     <div class="index-wrapper">
     <div class="btn-section">
-        <a class="btn-section-booking" href="booking.php">Boka rum här!</a>
-        <a class="btn-section-activity" href="activity.php">Eller kolla våra aktiviteter här</a>
+        <a class="btn-section-booking" href="booking.html">Boka rum här!</a>
+        <a class="btn-section-activity" href="activity.html">Eller kolla våra aktiviteter här</a>
     </div>
 
         <section class="index-section">
             <h1>Välkommen till Den glada geten!</h1>
             <img class="img-bubble-left" src="img/img-get1.jpg" alt="" />
-
             <p>
-                <?php 
-                    $query = "SELECT * FROM pages WHERE id=1";
-                    $pages_result = mysqli_query($db, $query);
-                    $page = mysqli_fetch_assoc($pages_result);
-                    echo $page['page_content1']; 
-                ?>
+                Den glada geten ligger beläget i det natursköna området Tjärnholmen
+                i Norrbotten. Utöver smakfullt inredda rum finns även aktiveter att
+                boka in under din vistelse. Gården är en gammal släktgård, som 2005
+                gjordes om till B&amp;B och har sedan dess lockat besökare från hela
+                Sverige och även världen.
+
             </p>
             <p>
-                <?php 
-                    echo $page['page_content2']; 
-                ?>
+                På den glada geten har vi två ”husgetter”, Gösta och Selma, som håller
+                till i en liten hage alldeles bredvid gårdshuset. Kring gården finns
+                även trevliga vandringsslingor och vågar min sig på ett dopp i älven
+                kan man boka bastu på den glada geten efter det svalkande doppet.
             </p>
         </section>
     </div>

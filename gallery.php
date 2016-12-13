@@ -30,7 +30,7 @@
     <nav id="nav" class="site-nav">
         <ul class="site-ul">
             <li><a href="index.html">Hem</a></li>
-            <li><a href="booking.html">Boka rum</a></li>
+            <li><a href="booking.php">Boka rum</a></li>
             <li class="has-dropdown"><a class="arrow-down" href="#about">Om oss</a>
                 <ul id="about" class="dropdown hidden">
                     <li><a href="about.html">Om oss</a></li>
@@ -54,12 +54,12 @@
 
 		<?php
 
-		$handle = opendir(dirname(realpath(__FILE__)).'/picgallery/');
+		$handle = opendir(dirname(realpath(__FILE__)).'/login/user_images/');
         while($file = readdir($handle)){
             if($file !== '.' && $file !== '..'){
 
 
-                echo '<li><a class="fancybox" rel="group" href="picgallery/'.$file.'"><img src="picgallery/'.$file.'" border="0" /></a></li>';
+                echo '<li><a class="fancybox" rel="group" href="login/user_images/'.$file.'"><img src="login/user_images/'.$file.'" border="0" /></a></li>';
 
 
             }

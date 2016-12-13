@@ -14,7 +14,7 @@
 
 
 <header class="site-header">
-    <a href="index.html">
+    <a href="index.php">
         <h1>Den glada geten</h1>
     </a>
 
@@ -26,17 +26,17 @@
 
     <nav id="nav" class="site-nav">
         <ul class="site-ul">
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="booking.html">Boka rum</a></li>
+            <li><a href="index.php">Hem</a></li>
+            <li><a href="booking.php">Boka rum</a></li>
             <li class="has-dropdown"><a class="arrow-down" href="#about">Om oss</a>
                 <ul id="about" class="dropdown hidden">
-                    <li><a href="about.html">Om oss</a></li>
-                    <li><a href="room.html">Våra rum</a></li>
+                    <li><a href="about.php">Om oss</a></li>
+                    <li><a href="room.php">Våra rum</a></li>
                     <li><a href="gallery.php">Galleri</a></li>
-                    <li><a href="price.html">Priser</a></li>
+                    <li><a href="price.php">Priser</a></li>
                 </ul>
             </li>
-            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="contact.php">Kontakt</a></li>
         </ul>
     </nav>
 </header>
@@ -77,7 +77,7 @@
         </div>
 
         <p class="spa">Du kan också boka en spaupplevelse på den glada getens egna SPA.
-        Se <a class="price-reference" href="price.html">priser</a> för mer information.</p>
+        Se <a class="price-reference" href="price.php">priser</a> för mer information.</p>
     </div>
 </div>
 

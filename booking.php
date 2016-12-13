@@ -138,7 +138,7 @@ $db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', 
 	else{
 		echo "
 		<header class='site-header'>
-    <a href='index.html'>
+    <a href='index.php'>
         <h1>Den glada geten</h1>
     </a>
 
@@ -150,18 +150,18 @@ $db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', 
 
     <nav id='nav' class='site-nav'>
         <ul class='site-ul'>
-            <li><a href='index.html'>Hem</a></li>
+            <li><a href='index.php'>Hem</a></li>
             <li><a href='booking.php'>Boka rum</a></li>
             <li class='has-dropdown'><a class='arrow-down' href='#about'>Om oss</a>
                 <ul id='about' class='dropdown hidden'>
-                    <li><a href='about.html'>Om oss</a></li>
-                    <li><a href='room.html'>Våra rum</a></li>
+                    <li><a href='about.php'>Om oss</a></li>
+                    <li><a href='room.php'>Våra rum</a></li>
                     <li><a href='gallery.php'>Galleri</a></li>
-                    <li><a href='price.html'>Priser</a></li>
-                    <li><a href='activity.html'>Aktiviteter</a></li>
+                    <li><a href='price.php'>Priser</a></li>
+                    <li><a href='activity.php'>Aktiviteter</a></li>
                 </ul>
             </li>
-            <li><a href='contact.html'>Kontakt</a></li>
+            <li><a href='contact.php'>Kontakt</a></li>
         </ul>
     </nav>
 </header>
@@ -226,7 +226,7 @@ $db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', 
 					<input type='checkbox', name='activity[]', value='  Getklappning' ><label>Getklappning (50 kr/person)</label><br>
 					<input type='checkbox', name='activity[]', value='  Skogspromenad' ><label>Skogspromenad (250 kr/person)</label><br>
 					<input type='checkbox', name='activity[]', value='  Skotersafari' ><label>Getklappning (50 kr/person)</label><br>
-					<input type='checkbox', name='activity[]', value='  Spa' ><label>Spa (se <a class='price-reference' href='price.html'>prislista</a>)</label>
+					<input type='checkbox', name='activity[]', value='  Spa' ><label>Spa (se <a class='price-reference' href='price.php'>prislista</a>)</label>
 				</fieldset>
 	   
 				<p class='field-block field-block-full'>

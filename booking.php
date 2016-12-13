@@ -12,8 +12,7 @@
 		
 <?php	
 	// Uppkoppling till DB
-	$db = mysqli_connect('localhost', 'root', '', 'gladageten');
-//--------------- skicka data till DB ---------------------------------------
+$db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', '219291-gg');//--------------- skicka data till DB ---------------------------------------
 					
 	if ( isset ($_POST['boka']) ) {
 		$firstName = $_POST['firstName'];

@@ -1,8 +1,8 @@
 <?php
 
-	$DB_HOST = 'localhost';
-	$DB_USER = 'root';
-	$DB_PASS = '';
+	$DB_HOST = 'gg-219291.mysql.binero.se';
+	$DB_USER = '219291_ow20538';
+	$DB_PASS = 'Sommar16';
 	$DB_NAME = '219291-gg';
 	
 	try{

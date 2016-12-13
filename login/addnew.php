@@ -45,7 +45,7 @@
 		// if no error occured, continue ....
 		if(!isset($errMSG))
 		{
-			$stmt = $DB_con->prepare('INSERT INTO tbl_users(userPic) VALUES(:upic)');
+			$stmt = $DB_con->prepare('INSERT INTO images(userPic) VALUES(:upic)');
 			$stmt->bindParam(':upic',$userpic);
 			
 			if($stmt->execute())

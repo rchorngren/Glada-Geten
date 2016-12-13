@@ -259,5 +259,6 @@ $db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', 
 
 ?>
 <script src='script/kalenderscript.js'></script>
+<script src='script/main.js'></script>
 </body>
 </html>

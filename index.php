@@ -1,5 +1,5 @@
 ﻿<?php 
-    $db = mysqli_connect("localhost", "root", "", "company");
+    $db = mysqli_connect("gg-219291.mysql.binero.se", "219291_ow20538", "Sommar16", "219291-gg");
 
 ?>
 

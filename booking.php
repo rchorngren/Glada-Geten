@@ -203,11 +203,11 @@ $db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', 
 			</p>
 			<p class='field-block'>
 				<label for='arrives'>Check-in</label>
-				<input class='text-field' id='arrives' name='arrives' placeholder='  åå-mm-dd required'>
+				<input class='text-field' id='arrives' name='arrives' placeholder='dd-mm-åå'>
 			</p>
 			<p class='field-block'>
 				<label for='departs'>Check-out</label>
-				<input class='text-field' id='departs' name='departs' placeholder='  åå-mm-dd required'>
+				<input class='text-field' id='departs' name='departs' placeholder='dd-mm-åå'>
 			</p>
 			<p class='field-block'>
 			<label for='rooms'>Rum</label>

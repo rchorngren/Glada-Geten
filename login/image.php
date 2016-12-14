@@ -67,7 +67,7 @@ include('session.php');
 				<img src="user_images/<?php echo $row['userPic']; ?>" class="img-rounded" width="250px" height="250px" />
 				<p class="page-header">
 				<span>
-				<a class="btn btn-danger" href="?delete_id=<?php echo $row['userID']; ?>" title="click for delete" onclick="return confirm('Säker på att du vill radera? ')"><span class="glyphicon glyphicon-remove-circle"></span> Delete</a>
+				<a class="btn btn-danger" href="?delete_id=<?php echo $row['userID']; ?>" title="Radera bild" onclick="return confirm('Säker på att du vill radera? ')"><span class="glyphicon glyphicon-remove-circle"></span> Radera</a>
 				</span>
 				</p>
 			</div>       
@@ -92,8 +92,6 @@ include('session.php');
 
 </div>
 
-
-<!-- Latest compiled and minified JavaScript -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
 </body>

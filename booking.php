@@ -127,6 +127,7 @@ $db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', 
 					//$brev ="tvkocken@gmail.com";
 					if (mysqli_query($db, $query)) {
 						echo "Tack för din bokning";
+						header("refresh:10;index.php"); //After 10 seconds, the page will refresh and forward to index.php
 					}
 					else {
 						echo "hoppsan '$firstName', '$lastName', '$email', '$phone', '$address', '$zipCode', '$city', '$country', '$arrives', '$departs', '$select'";
@@ -202,11 +203,11 @@ $db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', 
 			</p>
 			<p class='field-block'>
 				<label for='arrives'>Check-in</label>
-				<input class='text-field' id='arrives' name='arrives' type='date' placeholder='  åå-mm-dd required'>
+				<input class='text-field' id='arrives' name='arrives' placeholder='  åå-mm-dd required'>
 			</p>
 			<p class='field-block'>
 				<label for='departs'>Check-out</label>
-				<input class='text-field' id='departs' name='departs' type='date' placeholder='  åå-mm-dd required'>
+				<input class='text-field' id='departs' name='departs' placeholder='  åå-mm-dd required'>
 			</p>
 			<p class='field-block'>
 			<label for='rooms'>Rum</label>

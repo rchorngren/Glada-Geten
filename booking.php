@@ -12,8 +12,8 @@
 		
 <?php	
 	// Uppkoppling till DB
-	//$db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', '219291-gg');
-	$db = mysqli_connect('localhost', 'root', '', 'gladageten');//--------------- skicka data till DB ---------------------------------------
+	$db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', '219291-gg');
+	//$db = mysqli_connect('localhost', 'root', '', 'gladageten');//--------------- skicka data till DB ---------------------------------------
 					
 	if ( isset ($_POST['boka']) ) {
 		$firstName = $_POST['firstName'];
@@ -49,7 +49,7 @@
 		<form class='booking' method='post' action='' >
 			<p>
 				Rumstyp: $rt
-				<input type ='text' name='room_nr' value='$room_nr'>
+				<input type ='hidden' name='room_nr' value='$room_nr'>
 			</p>	
 			<p>
 				Namn: $firstName

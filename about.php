@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    $db = mysqli_connect("localhost", "root", "", "company");
+    mysqli_query($db, "SET NAMES utf8");
+?>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="utf-8">
@@ -44,36 +48,23 @@
 <div class="site-wrapper">
     <section class="about-wrapper">
         <section class="section-about">
-            <h1 class="about-h1">Om Den glada geten, en B&amp;B</h1>
+            <h1 class="about-h1">
+                <?php 
+                    $query = "SELECT * FROM pages WHERE id=2";
+                    $pages_result = mysqli_query($db, $query);
+                    $page = mysqli_fetch_assoc($pages_result);
+                    echo $page['main_heading']; 
+                ?>  
+            </h1>
             <img class="img-bubble-left" src="img/img-get1.jpg" alt="Geten Gösta" />
-            <p>
-                Den glada geten ligger beläget i det natursköna området Tjärnholmen
-                i Norrbotten. Utöver smakfullt inredda rum finns även aktiveter att
-                boka in under din vistelse. Gården är en gammal släktgård, som 2005
-                gjordes om till B&amp;B och har sedan dess lockat besökare från hela
-                Sverige och även världen.
-
-            </p>
+            
+            <p><?php echo $page['page_content1']; ?></p>
 
             <img class="img-bubble-right" src="img/img-get2.jpg" alt="Geten Selm" />
-            <p>
-                På den glada geten har vi två ”husgetter”, Gösta och Selma, som håller
-                till i en liten hage alldeles bredvid gårdshuset. Kring gården finns
-                även trevliga vandringsslingor och vågar min sig på ett dopp i älven
-                kan man boka bastu på den glada geten efter det svalkande doppet.
-            </p>
-            <p>Du kan välja att delta i våra
+            <p><?php echo $page['page_content2']; ?>
                 <a class="activity-reference" href="activity.php">aktiviteter.</a>
             </p>
-            <p>
-                Samtliga rum på den glada geten har härliga sänglinnen i percale,
-                som utlovar en härlig och sval natts sömn. Det finns även Wifi i alla
-                rum (även om vi på glada geten förespråkar en nedkopplad tillvaro med
-                nära naturupplevelser framför internet), minibar, vattenkokare, handdukar
-                och badlakan och vår alldeles egna handgjorda tvål att använda i badkaret
-                eller duschen!
-                Familjerumen har även öppenspis.
-            </p>
+            <p><?php echo $page['page_content3']; ?></p>
         </section>
     </section>
 </div>

@@ -4,7 +4,7 @@ include('session.php');
 <!DOCTYPE html>
 <html>
 <head>
-<title>Your Home Page</title>
+<title>Admin</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>

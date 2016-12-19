@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    $db = mysqli_connect("localhost", "root", "", "company");
+    mysqli_query($db, "SET NAMES utf8");
+?>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="utf-8">
@@ -42,7 +46,6 @@
 </header>
 
 <div class="site-wrapper">
-
     <div class="row">
         <div class="col">
             <div class="card">
@@ -51,15 +54,22 @@
                     <!-- <span class="card-title">Lyx</span> -->
                 </div>
                 <div class="card-content">
-                    <span class="room-title">Enkelrum</span>
+                    <span class="room-title">
+                        <?php 
+                            $query = "SELECT * FROM pages WHERE id=3";
+                            $pages_result = mysqli_query($db, $query);
+                            $page = mysqli_fetch_assoc($pages_result);
+                            echo $page['main_heading']; 
+                        ?> 
+                    </span>
                     <p>
                         <ul class="room-specs">
-                            <li>Härliga sänglinnen i percale</li>
-                            <li>Wi-Fi</li>
-                            <li>Minibar</li>
-                            <li>Vattenkokare</li>
-                            <li>Handdukar och badlakan</li>
-                            <li>Handgjord tvål</li>
+                            <li><?php echo $page['page_content1']; ?></li>
+                            <li><?php echo $page['page_content2']; ?></li>
+                            <li><?php echo $page['page_content3']; ?></li>
+                            <li><?php echo $page['page_content4']; ?></li>
+                            <li><?php echo $page['page_content5']; ?></li>
+                            <li><?php echo $page['page_content6']; ?></li>
                         </ul>
                     </p>
                 </div>
@@ -73,15 +83,22 @@
                     <!-- <span class="card-title">Standard</span> -->
                 </div>
                 <div class="card-content">
-                    <span class="room-title">Dubbelrum</span>
+                    <span class="room-title">
+                        <?php 
+                            $query = "SELECT * FROM pages WHERE id=4";
+                            $pages_result = mysqli_query($db, $query);
+                            $page = mysqli_fetch_assoc($pages_result);
+                            echo $page['main_heading']; 
+                        ?> 
+                    </span>
                     <p>
                         <ul class="room-specs">
-                            <li>Härliga sänglinnen i percale</li>
-                            <li>Wi-Fi</li>
-                            <li>Minibar</li>
-                            <li>Vattenkokare</li>
-                            <li>Handdukar och badlakan</li>
-                            <li>Handgjord tvål</li>
+                            <li><?php echo $page['page_content1']; ?></li>
+                            <li><?php echo $page['page_content2']; ?></li>
+                            <li><?php echo $page['page_content3']; ?></li>
+                            <li><?php echo $page['page_content4']; ?></li>
+                            <li><?php echo $page['page_content5']; ?></li>
+                            <li><?php echo $page['page_content6']; ?></li>
                         </ul>
                     </p>
                 </div>
@@ -95,16 +112,23 @@
                     <!-- <span class="card-title">Standard</span> -->
                 </div>
                 <div class="card-content">
-                    <span class="room-title">Familjerum</span>
+                    <span class="room-title">
+                        <?php 
+                            $query = "SELECT * FROM pages WHERE id=5";
+                            $pages_result = mysqli_query($db, $query);
+                            $page = mysqli_fetch_assoc($pages_result);
+                            echo $page['main_heading']; 
+                        ?> 
+                    </span>
                     <p>
                         <ul class="room-specs">
-                            <li>Härliga sänglinnen i percale</li>
-                            <li>Wi-Fi</li>
-                            <li>Minibar</li>
-                            <li>Vattenkokare</li>
-                            <li>Handdukar och badlakan</li>
-                            <li>Handgjord tvål</li>
-                            <li>Öppenspis</li>
+                            <li><?php echo $page['page_content1']; ?></li>
+                            <li><?php echo $page['page_content2']; ?></li>
+                            <li><?php echo $page['page_content3']; ?></li>
+                            <li><?php echo $page['page_content4']; ?></li>
+                            <li><?php echo $page['page_content5']; ?></li>
+                            <li><?php echo $page['page_content6']; ?></li>
+                            <li><?php echo $page['page_content7']; ?></li>
                         </ul>
                     </p>
                 </div>

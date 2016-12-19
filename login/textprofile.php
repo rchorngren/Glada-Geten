@@ -16,7 +16,7 @@ include('textadmin.php');
 </div>
 <nav>
 	<ul>
-		<li><a href="profile.php" class="current">Text admin</a></li>
+		<li><a href="textprofile.php" class="current">Text admin</a></li>
 		<li><a href="image.php">Bild admin</a></li>
 		<li><a href="booking.php">Bokningar</a></li>			
 	</ul>	

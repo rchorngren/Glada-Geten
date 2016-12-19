@@ -38,7 +38,7 @@ include('session.php');
 </div>
 <nav>
 	<ul>
-		<li><a href="profile.php">Text admin</a></li>
+		<li><a href="textprofile.php">Text admin</a></li>
 		<li><a href="image.php" class="current">Bild admin</a></li>
 		<li><a href="booking.php">Bokningar</a></li>			
 	</ul>

@@ -25,7 +25,7 @@ $rows = mysqli_query($connection, $query);
 //$rows = mysqli_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Initializing Session
-header("location: profile.php"); // Redirecting To Other Page
+header("location: textprofile.php"); // Redirecting To Other Page
 } else {
 $error = "Användarnamnet eller lösenordet är felaktigt";
 }

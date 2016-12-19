@@ -38,8 +38,6 @@ body {
     flex: 1;
 }
 
-
-
 /*******************************************
             MENU
 *******************************************/
@@ -147,7 +145,6 @@ body {
     top: 14px;
 }
 
-
 /*******************************************
     SHAPES, HOME PAGE - ABOUT PAGE
 *******************************************/
@@ -167,7 +164,6 @@ body {
 .img-bubble-right {
     float: right;
 }
-
 
 /*******************************************
             HOME PAGE - ABOUT PAGE
@@ -225,7 +221,6 @@ body {
     margin: 20px;
 }
 
-
 /*******************************************
             PRICE
 *******************************************/
@@ -263,7 +258,6 @@ thead {
 th {
     font-weight: 700;
 }
-
 
 /*******************************************
             ACTIVITY
@@ -312,8 +306,6 @@ th {
     margin-left: auto;
     margin-right: auto;
 }
-
-
 
 /*******************************************
             BOOKING
@@ -412,7 +404,6 @@ fieldset li {
     margin-top: 5px;
 }
 
-
 .arrow-down::after {
     content: "";
     display: inline-block;
@@ -468,23 +459,6 @@ td {
     
 }
 /*******************************************
-            CONFIRMED THANK
-*******************************************/
-
-.confirmed-form {
-    font-family: 'IM Fell Great Primer', serif;
-    font-style: italic;
-    font-size: 3.6em;
-    font-weight: 400;
-    height: 98vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-/*******************************************
 ROOMS
 *******************************************/
 
@@ -514,11 +488,6 @@ ROOMS
 }
 
 .card-small .card-title {
-    /*font-size: 2.7rem;
-    font-family: Helvetica, sans-serif;
-    font-weight: 700;
-    color: #000;
-    text-transform: uppercase;*/
     margin: 0;
     position: absolute;
     top: 50%;
@@ -538,7 +507,6 @@ ROOMS
 .img-room {
     max-width: 100%;
 }
-
 
 /*******************************************
             CONTACT
@@ -592,7 +560,6 @@ ROOMS
     height: 45px;
 }
 
-
 /*******************************************
             GOOGLE MAPS
 *******************************************/
@@ -603,7 +570,6 @@ ROOMS
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
 
 /*******************************************
             FOOTER
@@ -618,6 +584,10 @@ ROOMS
     padding-bottom: 20px;
 }
 
+.site-footer p {
+    margin-left: 25px;
+    margin-right: 25px;
+}
 
 /*******************************************
             RESPONSIVE DESIGN
@@ -625,10 +595,6 @@ ROOMS
 
 /*  When document size is smallen than  */
 @media screen and (max-width: 500px) {
-    label, input, textarea {
-        display: block;
-    }
-
     .form-btn {
         margin-left: 0;
     }
@@ -640,7 +606,7 @@ ROOMS
     }
 
     .site-header h1 {
-        display: none;
+        float: right;
     }
 
     .site-ul {

@@ -1,12 +1,9 @@
 <?php
-
 	error_reporting( ~E_NOTICE ); // avoid notice
-	
 	require_once 'dbconfig.php';
 	
 	if(isset($_POST['btnsave']))
 	{
-		
 		$imgFile = $_FILES['user_image']['name'];
 		$tmp_dir = $_FILES['user_image']['tmp_name'];
 		$imgSize = $_FILES['user_image']['size'];
@@ -41,8 +38,7 @@
 			}
 		}
 		
-		
-		// if no error occured, continue ....
+		// if no error occured, continue
 		if(!isset($errMSG))
 		{
 			$stmt = $DB_con->prepare('INSERT INTO images(userPic) VALUES(:upic)');
@@ -51,7 +47,6 @@
 			if($stmt->execute())
 			{
 				$successMSG = "Bilden är uppladdad";
-				header("refresh:5;image.php"); // redirects image view page after 5 seconds.
 			}
 			else
 			{
@@ -60,6 +55,7 @@
 		}
 	}
 ?>
+
 <!DOCTYPE html PUBLIC>
 <html>
 <head>
@@ -67,8 +63,6 @@
 <title></title>
 
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
-<!-- Optional theme -->
 <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 
 </head>
@@ -76,12 +70,10 @@
 
 <div class="container">
 
-
 	<div class="page-header">
     	<h1 class="h2">Lägg till bild <a class="btn btn-default" href="image.php"> <span class="glyphicon glyphicon-eye-open"></span> &nbsp; Visa bilder i galleriet </a></h1>
     </div>
     
-
 	<?php
 	if(isset($errMSG)){
 			?>
@@ -115,20 +107,11 @@
         </td>
     </tr>
     
-    </table>
-    
+    </table>    
 </form>    
-
 </div>
 
-
-
-	
-
-
-<!-- Latest compiled and minified JavaScript -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
-
 
 </body>
 </html>

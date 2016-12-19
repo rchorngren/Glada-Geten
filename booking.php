@@ -36,6 +36,7 @@
 			$activity_string = implode (", ", $_POST['activity']);
 		}
 		
+<<<<<<< HEAD
 		$query = "select type from rooms where room_nr='$room_nr'";
 		$result = mysqli_query($db, $query);
 		
@@ -44,6 +45,140 @@
 		
 <?php
 	echo "
+=======
+		<?php
+		echo "
+			<form class='booking' method='post' action='' >
+				<p>
+					Namn: $firstName
+					<input type='hidden' name='firstName' value='$firstName' >
+				</p>
+				<p>
+					Efternamn: $lastName
+					<input type='hidden' name='lastName' value='$lastName' >
+				</p>
+				<p>
+					Epost: $email
+					<input type='hidden' name='email' value='$email' >
+				</p>
+				<p>
+					Telefon:$phone
+					<input type='hidden' name='phone' value='$phone' >
+				</p>
+				<p>
+					<input type='hidden' name='address' value='$address' >
+				</p>
+				<p>
+					Adress: $address
+					<input type='hidden' name='zipCode' value='$zipCode' >
+				</p>
+				<p>
+					Stad: $city
+					<input type='hidden' name='city' value='$city' >
+				</p>
+				<p>
+					Land: $country
+					<input type='hidden' name='country' value='$country' >
+				</p>
+				 <p class='field-block'>
+					Check-in: $arrives
+					<input class='text-field' id='arrives' name='arrives' value='$arrives' type='hidden' >
+				</p>
+				<p class='field-block'>
+					Check-out: $departs
+					<input class='text-field' id='departs' name='departs' value='$departs' type='hidden' >
+				</p>
+				
+				<p class='field-block'>
+					Rum: $select				
+					<input type='hidden' name='room' value='$select' >
+				</p>
+				<p>
+					Aktivitet: $activity_string
+					<input type='hidden' name='activity' value='$activity_string' >
+				</p>
+				<fieldset>
+				Övrig information:
+					 $other
+				</fieldset>
+				<input type= 'hidden' name='other' value='$other'>
+						
+				<p class='field-block-btn field-block-full'>
+					<input name = 'confirm' id='form-btn' class='form-btn' type='submit' value='Bekräfta' />
+				</p>
+			</form>
+		";		
+					
+	}
+	elseif (isset ($_POST['confirm']) ){
+					$firstName = $_POST['firstName'];
+					$lastName = $_POST['lastName'];
+					$email = $_POST['email'];
+					$phone = $_POST['phone'];
+					$address = $_POST['address'];
+					$zipCode = $_POST['zipCode'];
+					$city = $_POST['city'];
+					$country = $_POST['country'];
+					$arrives = $_POST['arrives'];
+					$departs = $_POST['departs'];
+					$select = $_POST['room'];
+					$activity = $_POST['activity'];
+					
+					$other = $_POST['other'];
+					// Skickar /sparar i DB.
+					$query = "INSERT INTO  bookings
+						(date, firstName, lastName, email, phone, address, zipCode, city,	country, arrives, departs, room, activity, information)
+						VALUES 
+						(NOW(), 
+						'$firstName', '$lastName', '$email', '$phone', '$address', '$zipCode', '$city', '$country', '$arrives', '$departs', '$select', '$activity', '$other')
+						";
+					
+					$massege = "fjfjfjfjfjfj";
+					//$brev ="tvkocken@gmail.com";
+					if (mysqli_query($db, $query)) {
+						echo "Tack för din bokning";
+						header("refresh:10;index.php"); //After 10 seconds, the page will refresh and forward to index.php
+					}
+					else {
+						echo "hoppsan '$firstName', '$lastName', '$email', '$phone', '$address', '$zipCode', '$city', '$country', '$arrives', '$departs', '$select'";
+					}
+					//mail ($email, "Confirmation", $massege, "From: Gladageten.com");
+						
+	
+	} 
+	else{
+		echo "
+		<header class='site-header'>
+    <a href='index.php'>
+        <h1>Den glada geten</h1>
+    </a>
+
+    <a href='#nav' title='meny' class='toggle-nav' id='toggle-nav'>
+    <span></span>
+    <span></span>
+    <span></span>
+    </a>
+
+    <nav id='nav' class='site-nav'>
+        <ul class='site-ul'>
+            <li><a href='index.php'>Hem</a></li>
+            <li><a href='booking.php'>Boka rum</a></li>
+            <li class='has-dropdown'><a class='arrow-down' href='#about'>Om oss</a>
+                <ul id='about' class='dropdown hidden'>
+                    <li><a href='about.php'>Om oss</a></li>
+                    <li><a href='room.php'>Våra rum</a></li>
+                    <li><a href='gallery.php'>Galleri</a></li>
+                    <li><a href='price.php'>Priser</a></li>
+                    <li><a href='activity.php'>Aktiviteter</a></li>
+                </ul>
+            </li>
+            <li><a href='contact.php'>Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+<div class='site-wrapper'>
+	<div class='form-container'>
+>>>>>>> origin/master
 		<form class='booking' method='post' action='' >
 			<p>";
 				while($row = mysqli_fetch_assoc($result)) {
@@ -79,6 +214,7 @@
 				Stad: $city
 				<input type='hidden' name='city' value='$city' >
 			</p>
+<<<<<<< HEAD
 			<p>
 				Land: $country
 				<input type='hidden' name='country' value='$country' >
@@ -86,6 +222,15 @@
 			 <p class='field-block'>
 				Check-in: $arrives
 				<input class='text-field' id='arrives' name='arrives' value='$arrives' type='hidden' >
+=======
+			<p class='field-block'>
+				<label for='arrives'>Check-in</label>
+				<input class='text-field' id='arrives' name='arrives' placeholder='dd-mm-åå'>
+			</p>
+			<p class='field-block'>
+				<label for='departs'>Check-out</label>
+				<input class='text-field' id='departs' name='departs' placeholder='dd-mm-åå'>
+>>>>>>> origin/master
 			</p>
 			<p class='field-block'>
 				Check-out: $departs
@@ -95,12 +240,31 @@
 				Aktivitet: $activity_string
 				<input type='hidden' name='activity' value='$activity_string' >
 			</p>
+<<<<<<< HEAD
 			<fieldset>
 			Övrig information:
 				 $other
 			</fieldset>
 			<input type= 'hidden' name='other' value='$other'>
 					
+=======
+			<div class='field-block field-block-full'>
+				<fieldset>
+					<legend>Välj aktiviteter att boka</legend>
+					<input type='checkbox', name='activity[]', value='  Getmatning' ><label>Getmatning  (100 kr/person)</label><br>
+					<input type='checkbox', name='activity[]', value='  Getklappning' ><label>Getklappning (50 kr/person)</label><br>
+					<input type='checkbox', name='activity[]', value='  Skogspromenad' ><label>Skogspromenad (250 kr/person)</label><br>
+					<input type='checkbox', name='activity[]', value='  Skotersafari' ><label>Getklappning (50 kr/person)</label><br>
+					<input type='checkbox', name='activity[]', value='  Spa' ><label>Spa (se <a class='price-reference' href='price.php'>prislista</a>)</label>
+				</fieldset>
+	   
+				<p class='field-block field-block-full'>
+					<label class='other' for='other'>Övrig information</label>
+					<textarea class='text-field' id='other' name='other' rows='8'></textarea>
+				</p>
+				
+			</div>
+>>>>>>> origin/master
 			<p class='field-block-btn field-block-full'>
 				<input name = 'confirm' id='form-btn' class='form-btn' type='submit' value='Bekräfta' />
 			</p>
@@ -300,5 +464,6 @@
 	
 ?>
 <script src='script/kalenderscript.js'></script>
+<script src='script/main.js'></script>
 </body>
 </html>

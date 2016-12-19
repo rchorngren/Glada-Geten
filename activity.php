@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    $db = mysqli_connect("localhost", "root", "", "company");
+    mysqli_query($db, "SET NAMES utf8");
+?>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="utf-8">
@@ -43,41 +47,37 @@
 
 
 <div class="site-wrapper">
-    <h1 class="activity-h1">Aktiviteter</h1>
+    <h1 class="activity-h1">
+        <?php 
+            $query = "SELECT * FROM pages WHERE id=6";
+            $pages_result = mysqli_query($db, $query);
+            $page = mysqli_fetch_assoc($pages_result);
+            echo $page['main_heading']; 
+        ?>  
+    </h1>
     <div class="activities">
         <div class="activity-section">
-            <p class="activity-title">Getmatning</p>
-            <p>Bokningsbar aktivitet som innefattar mat till Gösta och Selma och kort
-            information om getskötsel.</p>
-            <p>Tidsåtgång: ca 30 min</p>
+            <p class="activity-title"><?php echo $page['page_content1']; ?></p>
+            <p><?php echo $page['page_content2']; ?></p>
         </div>
 
         <div class="activity-section">
-            <p class="activity-title">Getklappning</p>
-            <p>Gå in i hagen och klappa getterna! Personal från glada geten följer med och ser till
-            att du kommer nära både Gösta och Selma, och vid rätt tid på året även lammen.</p>
-            <p>Tidsåtgång: ca 30 min</p>
+            <p class="activity-title"><?php echo $page['page_content3']; ?></p>
+            <p><?php echo $page['page_content4']; ?></p>
         </div>
 
         <div class="activity-section">
-            <p class="activity-title">Skogspromenad</p>
-            <p>Guidad vandring runt området för den som är nyfiken på lite mer lokalkännedom.
-            Finns även kartor för kostnadsfria vandringar utan guide.</p>
-            <p>Tidsåtgång: ca 2 timmar</p>
+            <p class="activity-title"><?php echo $page['page_content5']; ?></p>
+            <p><?php echo $page['page_content6']; ?></p>
         </div>
 
         <div class="activity-section">
-            <p class="activity-title">Skotersafari</p>
-                Du tillsammans med en ledare kan känna att du kör tryggt och
-                säkert på en lagom lång tur i den underbara naturen i tjärnholmens
-                omnejd. Under turerna stannar vi för korvgrillning! Någon form av
-                körkort krävs, svenskt eller utländskt.
-            </p>
-            <p>Tidsåtgång: 4 timmar</p>
+            <p class="activity-title"><?php echo $page['page_content7']; ?></p>
+            <p><?php echo $page['page_content8']; ?></p>
         </div>
-
-        <p class="spa">Du kan också boka en spaupplevelse på den glada getens egna SPA.
-        Se <a class="price-reference" href="price.php">priser</a> för mer information.</p>
+        <p class="activity-title"><?php echo $page['page_content9']; ?></p>
+        <p class="spa"><?php echo $page['page_content10']; ?>
+        <a class="price-reference" href="price.php">priser.</a></p>
     </div>
 </div>
 

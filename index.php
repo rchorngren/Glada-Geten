@@ -1,8 +1,7 @@
 ﻿<?php 
     $db = mysqli_connect("localhost", "root", "", "company");
-
+    mysqli_query($db, "SET NAMES utf8");
 ?>
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -56,22 +55,18 @@
     </div>
 
         <section class="index-section">
-            <h1>Välkommen till Den glada geten!</h1>
-            <img class="img-bubble-left" src="img/img-get1.jpg" alt="" />
-
-            <p>
+            <h1> 
                 <?php 
                     $query = "SELECT * FROM pages WHERE id=1";
                     $pages_result = mysqli_query($db, $query);
                     $page = mysqli_fetch_assoc($pages_result);
-                    echo $page['page_content1']; 
-                ?>
-            </p>
-            <p>
-                <?php 
-                    echo $page['page_content2']; 
-                ?>
-            </p>
+                    echo $page['main_heading']; 
+                ?>    
+            </h1>
+            <img class="img-bubble-left" src="img/img-get1.jpg" alt="" />
+
+            <p><?php echo $page['page_content1']; ?></p>
+            <p><?php echo $page['page_content2']; ?></p>
         </section>
     </div>
 </div>

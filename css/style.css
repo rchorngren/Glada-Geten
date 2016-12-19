@@ -462,7 +462,11 @@ fieldset li {
 .other {
     vertical-align: top;
 }
-
+td {
+	padding: 3px;
+    border: 5px solid  #c9c9c9;
+    
+}
 /*******************************************
             CONFIRMED THANK
 *******************************************/

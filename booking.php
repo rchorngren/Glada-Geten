@@ -12,8 +12,8 @@
 		
 <?php	
 	// Uppkoppling till DB
-	$db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', '219291-gg');
-	//$db = mysqli_connect('localhost', 'root', '', 'gladageten');//--------------- skicka data till DB ---------------------------------------
+	//$db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', '219291-gg');
+	$db = mysqli_connect('localhost', 'root', '', '219291-gg');//--------------- skicka data till DB ---------------------------------------
 					
 	if ( isset ($_POST['boka']) ) {
 		$firstName = $_POST['firstName'];
@@ -132,7 +132,11 @@
 		$massege = "fjfjfjfjfjfj";
 		//$brev ="tvkocken@gmail.com";
 		if (mysqli_query($db, $query)) {
-			echo "Tack för din bokning";
+			
+			include ('header.php');
+				echo "
+					<h1>Tack för din bokning</h1>";
+			include ('footer.php');	
 		}
 		else {
 			echo "hoppsan '$firstName', '$lastName', '$email', '$phone', '$address', '$zipCode', '$city', '$country', '$arrives', '$departs', '$select'";
@@ -160,9 +164,9 @@
 						)";
 		$result = mysqli_query($db, $query);
 		
-		
+		include ('header.php');
 		echo" 
-			<header class='site-header'>
+			<!--header class='site-header'>
 				<a href='index.html'>
 					<h1>Den glada geten</h1>
 				</a>
@@ -189,7 +193,7 @@
 						<li><a href='contact.html'>Kontakt</a></li>
 					</ul>
 				</nav>
-			</header>
+			</header-->
 				<div class='site-wrapper'>
 					<div class='form-container'>
 						<form class='booking' method='post' action='' >
@@ -266,7 +270,7 @@
 						</form>
 					</div>
 				</div>
-			<footer class='site-footer'>
+			<!--footer class='site-footer'>
 				<div class='compatible'>
 					<img class='dektop' src='icons/iconmonstr-computer-5.svg' alt=''>
 					<img class='tablet' src='icons/iconmonstr-tablet-1.svg' alt=''>
@@ -276,8 +280,9 @@
 				<p>
 					&copy; Den glada geten - Bed &amp; Breakfast 2016. All rights reserved.
 				</p>
-			</footer>
+			</footer-->
 			";
+			include ('footer.php');
 		}
 	else{
 	echo "

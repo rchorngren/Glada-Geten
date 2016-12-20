@@ -238,20 +238,25 @@ thead {
     margin: 25px;
 }
 
-.price-table {
-    margin-top: 35px;
+.price-list {
+    margin-top: 65px;
 }
 
-.price-table,
-.table-info {
+.price-list li {
+    margin-top: 12px;
+}
+
+.price-list,
+.list-info {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
     margin-bottom: 20px;
+    list-style-type: none;
 }
 
-.table-info {
+.list-info {
     margin-bottom: 60px;
 }
 

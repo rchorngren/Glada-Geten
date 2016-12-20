@@ -44,102 +44,29 @@
 <div class="site-wrapper">
 
     <h1 class="price-h1">Prislista för rum &amp; aktiviteter</h1>
-    <table class="price-table">
-        <thead>
-            <tr>
-                <th>Prislista</th>
-                <th>Pris (SEK)*</th>
-            </tr>
-        </thead>
 
-        <tbody>
-            <tr>
-                <td>Enkelrum</td>
-                <td>450 kr</td>
-            </tr>
+    <ul class="price-list">
+        <li>Enkelrum: 450 kr</li>
+        <li>Dubbelrum: 899 kr</li>
+        <li>Familjerum: 499 kr</li>
+    </ul>
+    
+    <ul class="price-list">
+        <li>Getmatning: 100 kr</li>
+        <li>Getklappning: 50 kr</li>
+        <li>Aurora skådning: Gratis</li>
+        <li>Skogspromenad: 250 kr</li>
+        <li>Skotersafari: 500 kr</li>
+    </ul>
+    
+    <ul class="price-list">
+        <li>Massage (50 min): 350 kr</li>
+        <li>Kurbad (30 min): 250 kr</li>
+        <li>Kroppsscrubb (50 min): 350 kr</li>
+        <li>Badtunna: 300 kr/h</li>
+    </ul>
 
-            <tr>
-                <td>Dubbelrum</td>
-                <td>899 kr</td>
-            </tr>
-
-            <tr>
-                <td>Familjerum</td>
-                <td>499 kr</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table class="price-table">
-        <thead>
-            <tr>
-                <th>Prislista</th>
-                <th>Pris (SEK)*</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>Getmatning</td>
-                <td>100 kr</td>
-            </tr>
-
-            <tr>
-                <td>Getklappning</td>
-                <td>50 kr</td>
-            </tr>
-
-            <tr>
-                <td>Aurora skådning</td>
-                <td>Gratis</td>
-            </tr>
-
-            <tr>
-                <td>Skogspromenad</td>
-                <td>250 kr</td>
-            </tr>
-
-            <tr>
-                <td>Skotersafari</td>
-                <td>500 kr</td>
-            </tr>
-        </tbody>
-    </table>
-
-
-
-    <table class="price-table">
-        <thead>
-            <tr>
-                <th>Prislista</th>
-                <th>Pris (SEK)*</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>Massage (50 min)</td>
-                <td>350 kr</td>
-            </tr>
-
-            <tr>
-                <td>Kurbad (30 min)</td>
-                <td>250 kr</td>
-            </tr>
-
-            <tr>
-                <td>Kroppsscrubb (50 min)</td>
-                <td>350 kr</td>
-            </tr>
-
-            <tr>
-                <td>Badtunna</td>
-                <td>300 kr/h</td>
-            </tr>
-        </tbody>
-    </table>
-
-<p class="table-info">Avser pris per natt och/eller person</p>
+<p class="list-info">Avser pris per natt och/eller person</p>
 
 </div>
 

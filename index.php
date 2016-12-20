@@ -11,7 +11,9 @@
     <meta name="copyright" content="http://www.dengladageten.com">
     <meta name="author" content="Grupp 8 - Octagon">
     <meta name="description" content="Välkommen till Den glada geten, en Bed and Breakfast ute på landsbygden för alla som vill samla sina krafter.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400i|Open+Sans:400,700" rel="stylesheet">
 </head>
@@ -84,7 +86,7 @@
     </p>
 </footer>
 
-<script src="script/jquery-3.1.0.min.js"></script>
+<!--script src="script/jquery-3.1.0.min.js"></script-->
 <script src="script/main.js"></script>
 
 </body>

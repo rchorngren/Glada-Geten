@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <header class='site-header'>
-				<a href='index.html'>
+				<a href='index.php'>
 					<h1>Den glada geten</h1>
 				</a>
 

@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    //$db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', '219291-gg');
+    //$db = mysqli_connect('localhost', 'root', '', '219291-gg');
+    $db = mysqli_connect("localhost", "root", "", "company");
+    mysqli_query($db, "SET NAMES utf8");
+?>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="utf-8">
@@ -43,30 +49,37 @@
 
 <div class="site-wrapper">
 
-    <h1 class="price-h1">Prislista för rum &amp; aktiviteter</h1>
+    <h1 class="price-h1">
+        <?php 
+            $query = "SELECT * FROM pages WHERE id=6";
+            $pages_result = mysqli_query($db, $query);
+            $page = mysqli_fetch_assoc($pages_result);
+            echo $page['main_heading']; 
+        ?>     
+    </h1>
 
     <ul class="price-list">
-        <li>Enkelrum: 450 kr</li>
-        <li>Dubbelrum: 899 kr</li>
-        <li>Familjerum: 499 kr</li>
+        <li><?php echo $page['page_content1']; ?></li>
+        <li><?php echo $page['page_content2']; ?></li>
+        <li><?php echo $page['page_content3']; ?></li>
     </ul>
     
     <ul class="price-list">
-        <li>Getmatning: 100 kr</li>
-        <li>Getklappning: 50 kr</li>
-        <li>Aurora skådning: Gratis</li>
-        <li>Skogspromenad: 250 kr</li>
-        <li>Skotersafari: 500 kr</li>
+        <li><?php echo $page['page_content4']; ?></li>
+        <li><?php echo $page['page_content5']; ?></li>
+        <li><?php echo $page['page_content6']; ?></li>
+        <li><?php echo $page['page_content7']; ?></li>
+        <li><?php echo $page['page_content8']; ?></li>
     </ul>
     
     <ul class="price-list">
-        <li>Massage (50 min): 350 kr</li>
-        <li>Kurbad (30 min): 250 kr</li>
-        <li>Kroppsscrubb (50 min): 350 kr</li>
-        <li>Badtunna: 300 kr/h</li>
+        <li><?php echo $page['page_content9']; ?></li>
+        <li><?php echo $page['page_content10']; ?></li>
+        <li><?php echo $page['page_content11']; ?></li>
+        <li><?php echo $page['page_content12']; ?></li>
     </ul>
 
-<p class="list-info">Avser pris per natt och/eller person</p>
+<p class="list-info"><?php echo $page['page_content13']; ?></p>
 
 </div>
 

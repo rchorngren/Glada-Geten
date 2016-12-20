@@ -51,7 +51,7 @@
 <div class="site-wrapper">
     <h1 class="activity-h1">
         <?php 
-            $query = "SELECT * FROM pages WHERE id=6";
+            $query = "SELECT * FROM pages WHERE id=7";
             $pages_result = mysqli_query($db, $query);
             $page = mysqli_fetch_assoc($pages_result);
             echo $page['main_heading']; 

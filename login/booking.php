@@ -1,6 +1,8 @@
 <?php
 include('session.php');
-$db = mysqli_connect("localhost", "root", "", "company");
+
+$db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', '219291-gg');
+//$db = mysqli_connect("localhost", "root", "", "company");
 mysqli_query($db, "SET NAMES utf8");
 ?>
 <!DOCTYPE html>
@@ -15,11 +17,11 @@ mysqli_query($db, "SET NAMES utf8");
 <b id="logout"><a href="logout.php">Logga ut</a></b>
 </div>
 <nav>
-	<ul>
-		<li><a href="textprofile.php">Text admin</a></li>
-		<li><a href="image.php">Bild admin</a></li>
-		<li><a href="booking.php" class="current">Bokningar</a></li>			
-	</ul>
+    <ul>
+        <li><a href="textprofile.php">Textadmin</a></li>
+        <li><a href="image.php">Bildadmin</a></li>
+        <li><a href="booking.php" class="current">Bokningar</a></li>            
+    </ul>
 </nav>
 <div class="booking-edit">
 <?php 
@@ -55,7 +57,7 @@ if ($booking_result->num_rows > 0) {
 }
 
 ?>
-		
+        
 </div>
 </body>
 </html>

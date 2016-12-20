@@ -6,7 +6,9 @@
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link href="css/datepicker.css" rel="stylesheet" type="text/css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400i|Open+Sans:400,700" rel="stylesheet">
 </head>
 <body>
 		
@@ -285,6 +287,7 @@
 			include ('footer.php');
 		}
 	else{
+		include ('header.php');
 	echo "
 		<form  method='post'>
 			<p class='field-block'>
@@ -296,13 +299,16 @@
 				<input class='text-field' id='departs' name='departs' placeholder='  åå-mm-dd '>
 			</p>
 			<p class='field-block-btn field-block-full'>
-				<input name = 'checkDate' id='form-btn' class='form-btn' type='submit' value='Kolla tillgänglighet' />
+				<input name = 'checkDate' id='form-btn' class='form-btn' type='submit' value='Fortsätt	' />
 			</p>
 		</form>
 	";
+	include ('footer.php');
 	}
 	
 ?>
 <script src='script/kalenderscript.js'></script>
+<script src="script/main.js"></script>
+
 </body>
 </html>

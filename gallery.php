@@ -17,7 +17,7 @@
 <body>
 
 <header class="site-header">
-    <a href="index.html">
+    <a href="index.php">
         <h1>Den glada geten</h1>
     </a>
 
@@ -29,18 +29,18 @@
 
     <nav id="nav" class="site-nav">
         <ul class="site-ul">
-            <li><a href="index.html">Hem</a></li>
+            <li><a href="index.php">Hem</a></li>
             <li><a href="booking.php">Boka rum</a></li>
             <li class="has-dropdown"><a class="arrow-down" href="#about">Om oss</a>
                 <ul id="about" class="dropdown hidden">
-                    <li><a href="about.html">Om oss</a></li>
-                    <li><a href="room.html">Våra rum</a></li>
+                    <li><a href="about.php">Om oss</a></li>
+                    <li><a href="room.php">Våra rum</a></li>
                     <li><a href="gallery.php">Galleri</a></li>
-                    <li><a href="price.html">Priser</a></li>
-                    <li><a href="activity.html">Aktiviteter</a></li>
+                    <li><a href="price.php">Priser</a></li>
+                    <li><a href="activity.php">Aktiviteter</a></li>
                 </ul>
             </li>
-            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="contact.php">Kontakt</a></li>
         </ul>
     </nav>
 </header>
@@ -48,13 +48,13 @@
 
 <div class="site-wrapper">
     <section id="content">
-		<div class="gallery">
-		<ul>
+        <div class="gallery">
+        <ul>
 
 
-		<?php
+        <?php
 
-		$handle = opendir(dirname(realpath(__FILE__)).'/login/user_images/');
+        $handle = opendir(dirname(realpath(__FILE__)).'/login/user_images/');
         while($file = readdir($handle)){
             if($file !== '.' && $file !== '..'){
 
@@ -65,11 +65,11 @@
             }
         }
 
-		?>
-		</ul>
+        ?>
+        </ul>
 
-		</div>
-	</section>
+        </div>
+    </section>
 </div>
 
 <footer class="site-footer">
@@ -91,7 +91,7 @@
 <!-- Add fancyBox -->
 <script type="text/javascript" src="gallery/source/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-	$(".fancybox").fancybox();
+    $(".fancybox").fancybox();
 </script>
 
 </body>

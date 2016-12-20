@@ -9,7 +9,7 @@
 		$imgSize = $_FILES['user_image']['size'];
 		
 		if(empty($imgFile)){
-			$errMSG = "Please Select Image File.";
+			$errMSG = "Välj en bildfil";
 		}
 		else
 		{

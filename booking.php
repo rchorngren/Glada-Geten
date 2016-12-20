@@ -143,7 +143,7 @@
 		else {
 			echo "hoppsan '$firstName', '$lastName', '$email', '$phone', '$address', '$zipCode', '$city', '$country', '$arrives', '$departs', '$select'";
 		}
-		//mail ($email, "Confirmation", $massege, "From: Gladageten.com");
+		mail ($email, "Confirmation", $massege, "From: Gladageten.com");
 						
 	
 	} 
@@ -168,34 +168,7 @@
 		
 		include ('header.php');
 		echo" 
-			<!--header class='site-header'>
-				<a href='index.html'>
-					<h1>Den glada geten</h1>
-				</a>
-
-				<a href='#nav' title='meny' class='toggle-nav' id='toggle-nav'>
-					<span></span>
-					<span></span>
-					<span></span>
-				</a>
-
-				<nav id='nav' class='site-nav'>
-					<ul class='site-ul'>
-						<li><a href='index.html'>Hem</a></li>
-						<li><a href='booking.php'>Boka rum</a></li>
-						<li class='has-dropdown'><a class='arrow-down' href='#about'>Om oss</a>
-							<ul id='about' class='dropdown hidden'>
-								<li><a href='about.html'>Om oss</a></li>
-								<li><a href='room.html'>Våra rum</a></li>
-								<li><a href='gallery.php'>Galleri</a></li>
-								<li><a href='price.html'>Priser</a></li>
-								<li><a href='activity.html'>Aktiviteter</a></li>
-							</ul>
-						</li>
-						<li><a href='contact.html'>Kontakt</a></li>
-					</ul>
-				</nav>
-			</header-->
+			
 				<div class='site-wrapper'>
 					<div class='form-container'>
 						<form class='booking' method='post' action='' >
@@ -272,17 +245,7 @@
 						</form>
 					</div>
 				</div>
-			<!--footer class='site-footer'>
-				<div class='compatible'>
-					<img class='dektop' src='icons/iconmonstr-computer-5.svg' alt=''>
-					<img class='tablet' src='icons/iconmonstr-tablet-1.svg' alt=''>
-					<img class='mobile' src='icons/iconmonstr-smartphone-3.svg' alt=''>
-				</div>
-
-				<p>
-					&copy; Den glada geten - Bed &amp; Breakfast 2016. All rights reserved.
-				</p>
-			</footer-->
+			
 			";
 			include ('footer.php');
 		}

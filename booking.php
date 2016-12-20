@@ -199,12 +199,12 @@
 						<form class='booking' method='post' action='' >
 							<p class='field-block'>
 								<label for='arrives'>Check-in</label>
-								<input class='text-field' id='arrives' value='$arrives' name='arrives' type='date' disabled>
+								<input class='text-field' id='arrives' value='$arrives' name='arrives' disabled>
 								<input class='text-field' id='arrives' value='$arrives' name='arrives' type='hidden' >
 							</p>
 							<p class='field-block'>
 								<label for='departs'>Check-out</label>
-								<input class='text-field' id='departs' value='$departs' name='departs' type='date' disabled >
+								<input class='text-field' id='departs' value='$departs' name='departs' disabled >
 								<input class='text-field' id='departs' value='$departs' name='departs' type='hidden'  >
 							</p>";
 						
@@ -217,11 +217,11 @@
 						
 							<p class='field-block'>
 								<label for='firstName'>Förnamn</label>
-								<input class='text-field' id='firstName' name='firstName' value='' placeholder='Förnamn' type='text' >
+								<input class='text-field' id='firstName' name='firstName' value='' placeholder='Förnamn' type='text' required>
 							</p>
 							<p class='field-block'>
 								<label for='lastName'>Efternamn</label>
-								<input class='text-field' id='lastName' name='lastName' value='' placeholder='Efternamn' type='text' >
+								<input class='text-field' id='lastName' name='lastName' value='' placeholder='Efternamn' type='text' required>
 							</p>
 							<p class='field-block'>
 								<label for='email'>E-mail</label>
@@ -229,23 +229,23 @@
 							</p>
 							<p class='field-block'>
 								<label for='phone'>Telefon</label>
-								<input class='text-field' id='phone' name='phone' value='' placeholder='Telefonnummer' type='number' >
+								<input class='text-field' id='phone' name='phone' value='' placeholder='Telefonnummer' type='number' required>
 							</p>
 							<p class='field-block'>
 								<label for='address'>Adress</label>
-								<input class='text-field' id='address' name='address' value='' placeholder='Adress' type='text' >
+								<input class='text-field' id='address' name='address' value='' placeholder='Adress' type='text' required>
 							</p>
 							<p class='field-block'>
 								<label for='zipCode'>Postnummer</label>
-								<input class='text-field' id='zipCode' name='zipCode' value='' placeholder='Postnummer' type='number' >
+								<input class='text-field' id='zipCode' name='zipCode' value='' placeholder='Postnummer' type='number' required>
 							</p>
 							<p class='field-block'>
 								<label for='city'>Stad</label>
-								<input class='text-field' id='city' name='city' value='' placeholder='Stad' type='text' >
+								<input class='text-field' id='city' name='city' value='' placeholder='Stad' type='text' required>
 							</p>
 							<p class='field-block'>
 								<label for='country'>Land</label>
-								<input class='text-field' id='country' name='country' value='' placeholder='Land' type='text' >
+								<input class='text-field' id='country' name='country' value='' placeholder='Land' type='text' required>
 							</p>
 							
 							<div class='field-block field-block-full'>
@@ -289,11 +289,11 @@
 		<form  method='post'>
 			<p class='field-block'>
 				<label for='arrives'>Check-in</label>
-				<input class='text-field' id='arrives' name='arrives' type='date' placeholder='  åå-mm-dd '>
+				<input class='text-field' id='arrives' name='arrives' placeholder='  åå-mm-dd '>
 			</p>
 			<p class='field-block'>
 				<label for='departs'>Check-out</label>
-				<input class='text-field' id='departs' name='departs' type='date' placeholder='  åå-mm-dd '>
+				<input class='text-field' id='departs' name='departs' placeholder='  åå-mm-dd '>
 			</p>
 			<p class='field-block-btn field-block-full'>
 				<input name = 'checkDate' id='form-btn' class='form-btn' type='submit' value='Kolla tillgänglighet' />

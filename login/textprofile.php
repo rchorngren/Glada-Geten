@@ -8,6 +8,8 @@ include('textadmin.php');
 <head>
 <title>Admin</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 </head>
 <body>
 <div id="profile">
@@ -16,8 +18,8 @@ include('textadmin.php');
 </div>
 <nav>
 	<ul>
-		<li><a href="textprofile.php" class="current">Text admin</a></li>
-		<li><a href="image.php">Bild admin</a></li>
+		<li><a href="textprofile.php" class="current">Textadmin</a></li>
+		<li><a href="image.php">Bildadmin</a></li>
 		<li><a href="booking.php">Bokningar</a></li>			
 	</ul>	
 </nav>

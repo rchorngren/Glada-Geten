@@ -10,6 +10,8 @@ mysqli_query($db, "SET NAMES utf8");
 <head>
 <title>Admin</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 </head>
 <body>
 <div id="profile">
@@ -59,5 +61,7 @@ if ($booking_result->num_rows > 0) {
 ?>
         
 </div>
+
+
 </body>
 </html>

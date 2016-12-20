@@ -1,4 +1,4 @@
-﻿<?php 
+﻿<?php
 	$db = mysqli_connect('gg-219291.mysql.binero.se', '219291_ow20538', 'Sommar16', '219291-gg');
 	//$db = mysqli_connect('localhost', 'root', '', '219291-gg');
     mysqli_query($db, "SET NAMES utf8");
@@ -56,21 +56,20 @@
         <a class="btn-section-booking" href="booking.php">Boka rum här!</a>
         <a class="btn-section-activity" href="activity.php">Eller kolla våra aktiviteter här</a>
     </div>
+    <section class="index-section">
+        <h1>
+            <?php
+                $query = "SELECT * FROM pages WHERE id=1";
+                $pages_result = mysqli_query($db, $query);
+                $page = mysqli_fetch_assoc($pages_result);
+                echo $page['main_heading'];
+            ?>
+        </h1>
+        <img class="img-bubble-left" src="img/img-get1.jpg" alt="" />
 
-        <section class="index-section">
-            <h1> 
-                <?php 
-                    $query = "SELECT * FROM pages WHERE id=1";
-                    $pages_result = mysqli_query($db, $query);
-                    $page = mysqli_fetch_assoc($pages_result);
-                    echo $page['main_heading']; 
-                ?>    
-            </h1>
-            <img class="img-bubble-left" src="img/img-get1.jpg" alt="" />
-
-            <p><?php echo $page['page_content1']; ?></p>
-            <p><?php echo $page['page_content2']; ?></p>
-        </section>
+        <p><?php echo $page['page_content1']; ?></p>
+        <p><?php echo $page['page_content2']; ?></p>
+    </section>
     </div>
 </div>
 

@@ -12,15 +12,6 @@ body {
     margin: 0 auto;
 }
 
-.site-header {
-    background-image: url("../img/header.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    max-width: 1080px;
-    height: 400px;
-    overflow: hidden;
-}
-
 .site-header h1 {
     color: #fff;
     font-family: 'IM Fell Great Primer', serif;
@@ -180,7 +171,6 @@ body {
 
 .btn-section {
     margin-top: 15px;
-    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -203,7 +193,7 @@ body {
 
 .index-wrapper,
 .about-wrapper {
-    margin-bottom: 90px;
+    margin-bottom: 30px;
 }
 
 .index-section h1,
@@ -225,10 +215,6 @@ body {
             PRICE
 *******************************************/
 
-thead {
-    display: none;
-}
-
 .price-h1 {
     font-family: 'IM Fell Great Primer', serif;
     font-style: italic;
@@ -239,7 +225,7 @@ thead {
 }
 
 .price-list {
-    margin-top: 65px;
+    margin-top: 40px;
 }
 
 .price-list li {
@@ -248,16 +234,15 @@ thead {
 
 .price-list,
 .list-info {
-    width: 300px;
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
-    margin-bottom: 20px;
     list-style-type: none;
 }
 
 .list-info {
-    margin-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 /*******************************************
@@ -381,7 +366,7 @@ label, legend {
     color: #000;
     font-weight: 400;
     font-size: 18px;
-    display: inline-block;
+    display: block;
 	margin-left: 5px;
 }
 
@@ -457,8 +442,13 @@ fieldset li {
 td {
 	padding: 3px;
     border: 5px solid  #c9c9c9;
-    
+
 }
+
+.check-date-form {
+    background-color: #fff;
+}
+
 /*******************************************
 ROOMS
 *******************************************/
@@ -624,7 +614,7 @@ ROOMS
     }
 
     .activities {
-        margin: 20px;
+        margin: 30px;
     }
 }
 

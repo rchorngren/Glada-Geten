@@ -199,12 +199,12 @@
 						<form class='booking' method='post' action='' >
 							<p class='field-block'>
 								<label for='arrives'>Check-in</label>
-								<input class='text-field' id='arrives' value='$arrives' name='arrives' type='date' disabled>
+								<input class='text-field' id='arrives' value='$arrives' name='arrives' disabled>
 								<input class='text-field' id='arrives' value='$arrives' name='arrives' type='hidden' >
 							</p>
 							<p class='field-block'>
 								<label for='departs'>Check-out</label>
-								<input class='text-field' id='departs' value='$departs' name='departs' type='date' disabled >
+								<input class='text-field' id='departs' value='$departs' name='departs' disabled >
 								<input class='text-field' id='departs' value='$departs' name='departs' type='hidden'  >
 							</p>";
 						
